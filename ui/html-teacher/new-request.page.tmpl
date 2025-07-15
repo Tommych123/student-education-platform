@@ -1,0 +1,18 @@
+{{template "base" .}}
+
+{{define "title"}}Новый запрос{{end}}
+{{define "main"}}
+    <form action="/student/new-request" method="post">
+        <div>
+            <label for="title">Имя запроса:</label>
+            <input type="text" id="title" name="title" required>
+        </div>
+        <div>
+            <label for="content">Содержимое запроса:</label>
+            <textarea id="content" name="content" rows="4" required></textarea>
+        </div>
+        <div>
+            <button type="submit">Отправить запрос</button>
+        </div>
+    </form>
+{{end}}

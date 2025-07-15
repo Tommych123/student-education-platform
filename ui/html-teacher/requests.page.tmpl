@@ -1,0 +1,32 @@
+{{template "base" .}}
+
+{{define "title"}}Мои запросы{{end}}
+    <table class="table">
+  <thead>
+    <tr>
+      <th>Название запроса</th>
+      <th>Дата создания</th>
+      <th>Действия</th>
+      <th>Статус</th>
+    </tr>
+  </thead>
+  <tbody>
+            {{range .Requests}}
+            <tr>
+                <td class="request">
+                <a href="/teacher/request?request={{.ID}}">{{.Title}}</a>
+                </td>
+                <td>{{.FormattedDate}}</td>
+                <td class="row-action-{{.Status}}">
+    {{if eq .Status "Открыт"}}
+        <a href="/teacher/choose?choose={{.ID}}">Выбрать</a>
+    {{else if eq .Status "В процессе"}}
+        <a href="/teacher/meeting?meeting={{.ID}}">Добавить ID для Zoom</a>
+    {{end}}</td>
+    <td class="row-color-{{.Status}}">{{.Status}}</td>
+            </tr>
+            {{end}}
+    </tbody>
+
+{{define "main"}}
+{{end}}

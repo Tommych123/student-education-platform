@@ -1,0 +1,20 @@
+{{template "base" .}}
+
+{{define "title"}}Домашняя страница{{end}}
+{{define "main"}}
+    <div class="container">
+  <h2 class="home">Создай запрос (^_^)</h2>
+  <b class="score">Баллы:{{.User.Scores}}</b>
+</div>
+    <a class="append-request-1" href="/student/new-request">Подробно опиши свой запрос</a>
+    <a class="append-request-2" href="/student/new-request">Минимум 15 символов</a>
+    <p2>Всё просто!</p2>
+        <p3>
+            <a1>↓ 1)Опиши свой запрос</a1>
+            <a1>↓ 2)Подожди пока твой запрос выберут</a1>
+            <a1>↓ 3)Оплати занятие</a1>
+            <a1>✓ 4)Посети занятие</a1>
+        </p3>
+    </div>
+</div>
+{{end}}

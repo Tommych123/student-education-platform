@@ -1,0 +1,30 @@
+{{template "base" .}}
+
+{{define "title"}}Запрос №{{.Request.ID}}{{end}}
+
+<!-- Контейнер для кнопки и заголовка -->
+<div class="header-container">
+    <a href="/student/requests" class="quit-button">⬅</a>
+    <h2 class="request-title">{{.Request.Title}}</h2>
+    <h4 class="request-color-{{.Request.Status}}">{{.Request.Status}}</h4>
+    <h5 class="request-color-action-{{.Request.Status}}">
+    {{if eq .Request.Status "Открыт"}}
+        <a href="/teacher/choose?choose={{.Request.ID}}">Выбрать заявку</a>
+    {{else if eq .Request.Status "В процессе"}}
+        <div class="request-container">
+    <a href="/teacher/meeting?meeting={{.Request.ID}}">Добавить ID для Zoom</a>
+    <a href="/teacher/finish?finish={{.Request.ID}}">Завершить занятие</a>
+</div>
+    {{end}}</h5>
+</div>
+
+
+<!-- Контент запроса -->
+<div class="center-container">
+    <div class="request-content">
+        <h3>{{.Request.Content}}</h3>
+    </div>
+</div>
+
+{{define "main"}}
+{{end}}

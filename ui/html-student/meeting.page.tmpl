@@ -1,0 +1,19 @@
+{{template "base" .}}
+
+{{define "title"}}Конференция Zoom{{end}}
+    <table class="table-zoom">
+  <thead>
+    <tr>
+      <th>Zoom ID конференции для занятия</th>
+    </tr>
+  </thead>
+  <tbody>
+            <tr>
+                <td>
+                <span id="zoom-id">{{.Request.ZoomID}}</span>
+<button class="copy-button" onclick="copyToClipboard()">Копировать</button>
+            </tr>
+    </tbody>
+
+{{define "main"}}
+{{end}}

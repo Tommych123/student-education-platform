@@ -1,0 +1,33 @@
+{{define "base"}}
+<!doctype html>
+<html lang='en'>
+<head>
+    <meta charset='utf-8'>
+    <title>{{template "title" .}} - Студенческая образовательная платформа</title>
+    <!-- Ссылка на CSS стили и иконку сайта -->
+    <link rel='stylesheet' href='/static/css/main.css'>
+    <link rel='shortcut icon' href='https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/d4/a2/21d4a2e5-f641-7495-d7a7-07ae6f8fee70/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/460x0w.webp' type='image/x-icon'>
+    <!-- Подключаем новый шрифт для сайта от Google Fonts -->
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700'>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+         <h1><a href="/teacher" class="teacher-button">Стать Преподавателем</a>
+        <h1><a href='/student/'>Студенческая образовательная платформа</a></h1>
+        </div>
+    </header>
+    <nav>
+        <a href="/student/">Главная</a>
+        <a href="/student/requests">Мои запросы</a>
+        <a href="/student/teachers">Преподаватели</a>
+        <a href="/student/help">Помощь</a>
+    </nav>
+    <main>
+        {{template "main" .}}
+    </main>
+    {{template "footer" .}}
+     <script src="/static/js/main.js"></script>
+</body>
+</html>
+{{end}}

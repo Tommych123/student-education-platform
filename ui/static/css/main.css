@@ -1,0 +1,668 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 18px;
+    font-family: "Ubuntu Mono", monospace;
+}
+
+html, body {
+    height: 100%;
+    margin:0;
+}
+
+body {
+    line-height: 1.5;
+    background-color: #FFFFFF;
+    color: #FFFFFF;
+    overflow-y: scroll;
+    padding-bottom: 60px; /* Чтобы контент не перекрывал футер */
+    margin: 0;
+}
+
+header, nav, main, footer{
+    padding: 2px calc((100% - 800px) / 2) 0;
+    width: 100%; /* Занимает всю ширину родительского контейнера */
+}
+
+main {
+    overflow: auto;
+}
+
+
+h1 {
+    margin: 0; /* Убираем отступы у заголовка */
+    position: absolute; /* Позиционирование относительно родительского элемента */
+    top: 15px; /* Отступ сверху на 50 пикселей */
+    left: 15px; /* Отступ слева на 50 пикселей */
+}
+a{
+    text-decoration: none !important;
+}
+
+h1 a {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+h1 a:hover {
+    text-decoration: none;
+    color: #34495E;
+}
+
+.container {
+    display: flex;
+    justify-content: center; /* Центрируем .home по горизонтали */
+    align-items: center; /* Вертикальное выравнивание элементов */
+    position: relative; /* Для позиционирования .score */
+    width: 100%; /* Контейнер занимает всю ширину экрана */
+}
+
+.home {
+    font-size: 42px;
+    font-weight: bold;
+    background-color: #000000;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    text-decoration: none;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5)); /* Объемный эффект */
+}
+
+.score {
+    position: absolute;
+    right: 0px; /* Отступ от правого края экрана */
+    top: 20px; /* Отступ сверху для более точного размещения */
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+}
+
+textarea, input:not([type="submit"]) {
+    font-size: 18px;
+    font-family: "Ubuntu Mono", monospace;
+}
+
+.append-request-1 {
+    display: flex; /* Используем Flexbox */
+    justify-content: flex-start; /* Выровнять элементы слева */
+    padding-top: 17px;
+    padding-bottom: 0px;
+    padding-left: 20px;
+    background-color:#2A46A0;
+    height: 100px;
+    color: #FFFFFF; /* Цвет текста */
+    background-clip: border-box; /* Убедиться, что градиент применяется к фону */
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5)); /* Объемный эффект */
+}
+
+
+
+.append-request-2 {
+    display: flex; /* Используем Flexbox */
+    justify-content: flex-start; /* Выровнять элементы слева */
+    padding-top: 40px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    background-color:#2A46A0;
+    height: 70px;
+    font-size: 15px;
+    color: #FFFFFF; /* Цвет текста */
+    background-clip: border-box; /* Убедиться, что градиент применяется к фону */
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5)); /* Объемный эффект */
+}
+
+p2 {
+    font-size: 42px;
+    margin-bottom: 36px;
+    text-align: left; /* Текст выравнен влево */
+    background-position: center; /* Центрируем изображение по вертикали */
+    width: max-content; /* Ширина по содержимому */
+    display: flex; /* Используем flexbox для лучшего выравнивания */
+    align-items: center; /* Вертикальное выравнивание текста и изображения */
+    justify-content: center; /* Центрирование содержимого внутри h2 */
+    margin-left: auto; /* Автоматические отступы для центрирования */
+    margin-right: auto; /* Автоматические отступы для центрирования */
+    margin-bottom: 20px; /* Добавить отступ снизу */
+    font-weight: bold;
+    background-color:#000000;
+    background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    color: transparent; 
+    height: auto; /* пусть высота подстраивается под содержимое */
+    text-decoration: none; /* убрать подчеркивание */
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5)); /* Объемный эффект */
+}
+/* Стили для p4 */
+
+.p3 {
+    display: flex;
+    align-items: center; /* Вертикальное выравнивание текста и изображения */
+    justify-content: center; /* Центрирование содержимого внутри контейнера */
+    padding-top: 15px;
+    width: 300px; /* Фиксированная ширина для всех прямоугольников */
+    height: 150px; /* Фиксированная высота для всех прямоугольников */
+    color: #FFFFFF;
+    gap: 45px;
+    margin-bottom: 20px; /* Отступ снизу для разделения с другими элементами */
+    background-color: #333333; /* Цвет фона прямоугольников */
+    text-align: center; /* Центрируем текст по горизонтали */
+    white-space: nowrap; /* Запрещаем перенос текста */
+    overflow: hidden; /* Скрываем текст, который не помещается */
+    text-overflow: ellipsis; /* Добавляем многоточие для текста, который не помещается */
+    border: 2px solid #000000; /* Граница прямоугольника */
+    border-radius: 10px; /* Закругление углов */
+}
+
+
+/* Стили для a2 */
+a1 {
+    font-size: 24px; /* Увеличение размера шрифта */
+    line-height: 2; /* Увеличение высоты строки */
+    padding-top: 0px; /* Добавление отступов */
+    padding-left: 50px;
+    padding-right: 50px;
+    display: block; /* Делает элемент блочным, чтобы padding применялся корректно */
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+    color: inherit; /* Наследует цвет текста от родительского элемента */
+    border: 2px solid #000000; /* Прозрачная рамка для основного элемента */
+    background-color:#2A46A0;
+    border-image-slice: 1; /* Указывает, какрезать изображение границы */
+    border-radius: 5px; /* Скругление углов рамки */
+}
+
+header {
+    background-color:#FFFFFF;
+    background-size: 100% 6px;
+    background-repeat: no-repeat;
+    border-bottom: 1px solid #E4E5E7;
+    overflow: auto;
+    padding-top: 33px;
+    padding-bottom: 27px;
+    text-align: center;
+}
+
+header a {
+    font-size: 32px;
+    font-weight: bold;
+background-color:#000000;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; 
+    color: transparent; 
+    height: auto;
+    padding-left: 10px;
+    text-decoration: none;
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.5)); /* Объемный эффект */
+}
+
+.teacher-button {
+    font-size: 20px;
+    display: inline-block;
+    padding: 2px 45px;
+    background-color: #000000; /* Цвет кнопки */
+    color: #000000; /* Цвет текста */
+    text-decoration: none; /* Убирает подчеркивание у ссылки */
+    border: 2px solid #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+    margin-left: 1200px; /* Отступ от левого края */
+    margin-top: 6px;
+    max-width: 250 px;
+}
+
+nav {
+    display: flex; /* Используем Flexbox */
+    justify-content: flex-start; /* Выровнять элементы слева */
+    border-bottom: 1px solid #E4E5E7;
+    padding-top: 17px;
+    position: relative;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    background-color:#2A46A0;
+    height: 60px;
+}
+
+nav a {
+    display: inline-block; /* Делаем ссылки блочными элементами */
+    margin-right: 100px; /* Расстояние между ссылками */
+    text-decoration: none; /* Убирает подчеркивание для ссылок (по желанию) */
+    color: #FFFFFF; /* Устанавливает цвет текста (по желанию) */
+    transition: color 0.3s, background-color 0.3s; /* Плавный переход */
+    position: relative;
+}
+
+
+
+nav a:hover {
+    color: #000000; /* Меняет цвет текста при наведении *//* Фоновый цвет остается белым */
+}
+
+nav form {
+    display: inline-block;
+    margin-left: 1.5em;
+}
+
+nav div {
+    width: 50%;
+    float: left;
+}
+
+nav div:last-child {
+    text-align: right;
+}
+
+nav div:last-child a {
+    margin-left: 1.5em;
+    margin-right: 0;
+}
+
+
+nav a.active::after {
+    transition: color 0.3s, background-color 0.3s; /* Плавный переход */
+    content: ""; /* Создаем пустой псевдоэлемент */
+    position: absolute; /* Абсолютное позиционирование относительно ссылки */
+    left: 0;
+    bottom: -2px; /* Сдвигаем линию на 5 пикселей вниз */
+    width: 100%; /* Ширина линии равна ширине ссылки */
+    height: 2px; /* Высота линии */
+    background-color: #FFFFFF; /* Цвет линии */
+}
+
+nav a.active:hover::after {
+    background-color: #000000; /* Черный цвет линии при наведении */
+}
+
+nav a.active:hover {
+    text-decoration: none;
+}
+
+a.button, input[type="submit"] {
+    background-color: #62CB31;
+    border-radius: 3px;
+    color: #FFFFFF;
+    padding: 18px 27px;
+    border: none;
+    display: inline-block;
+    margin-top: 18px;
+    font-weight: 700;
+}
+
+a.button:hover, input[type="submit"]:hover {
+    background-color: #4EB722;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-decoration: none;
+}
+.request a {
+    text-decoration: none; /* Убирает подчеркивание под ссылкой */
+    color: inherit; /* Устанавливает цвет текста ссылки такой же, как у родительского элемента (опционально) */
+}
+
+.copy-button {
+    width: 100%; /* Кнопка занимает всю ширину контейнера */
+    padding: 10px 15px; /* Внутренние отступы */
+    background-color: #007BFF; /* Синий фон для кнопки */
+    color: #000000; /* Черный цвет текста */
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Курсор в виде указателя при наведении */
+    font-size: 16px; /* Размер шрифта внутри кнопки */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавный переход фона и цвета текста */
+    text-decoration: none; /* Убирает подчеркивание текста, если это ссылка */
+}
+
+.copy-button:hover {
+    background-color: #0056b3; /* Более темный оттенок синего при наведении */
+    color: #fff; /* Белый цвет текста при наведении */
+}
+
+.request-container a {
+    margin: 0 10px; /* Отступы справа и слева */
+}
+
+
+
+.table, .table-teachers, .table-zoom, .table-request {
+    width: 97%;
+    border-collapse: collapse; /* Объединяет границы ячеек таблицы */
+    margin: 20px;
+    padding-left: 20px; /* Отступы слева */
+    padding-right: 20px; /* Отступы справа */
+}
+
+.table td, .table-teachers td, .table-zoom td, .table-request td {
+    border: 1px solid #110573; /* Граница для ячеек */
+    padding: 8px; /* Отступы внутри ячеек */
+    text-align: center; /* Выравнивание текста по центру */
+    vertical-align: middle; /* Вертикальное выравнивание текста по центру */
+    box-sizing: border-box; /* Учитываем границу в общей ширине и высоте */
+}
+
+.table thead, .table-teachers thead, .table-zoom thead, .table-request thead {
+    background-color:#2A46A0;
+}
+
+.table th, .table-teachers th {
+    color: #FFFFFF; /* Цвет текста для хорошего контраста с фоном */
+    font-weight: bold; /* Полужирное начертание текста заголовков */
+    padding: 10px;
+}
+
+.table tbody tr, .table-teachers tbody tr, .table-request tr, .table-zoom tr {
+    color: #000000;
+}
+
+.table tbody tr:hover, .table-teachers tbody tr:hover, .table-zoom tbody tr:hover, .table-request tbody tr:hover {
+    background-color:#8ea2e2;
+}
+
+.row-color-Открыт {
+    background-image: linear-gradient(to right, #FFFFFF 20%, #ff4442 100%);
+    color: #000000; /* Цвет текста */
+}
+
+.row-color-В{
+    background-image: linear-gradient(to right, #FFFFFF 20%, #ffff05 100%);
+    color: #000000; /* Цвет текста */
+}
+.row-color-Закрыт{
+    background-image: linear-gradient(to right, #FFFFFF 20%, #46ff21 100%);
+    color: #000000; /* Цвет текста */
+}
+
+.row-action-Открыт a:hover, .request-color-action-Открыт a:hover {
+    color: #FFFFFF !important; /* Цвет текста ссылки при наведении */
+    background: #e60000; /* Одноцветный фон при наведении */
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+}
+
+
+
+.row-action-В a, .row-action-Открыт a, .request-color-action-Открыт a, .request-color-action-В a {
+    color: #FFFFFF !important; /* Цвет текста ссылки */
+    text-decoration: none; /* Убирает подчеркивание у ссылки */
+    background-color:#2A46A0;
+    border: 2px solid #000; /* Черная граница вокруг ссылки */
+    padding: 4px 8px; /* Отступы внутри прямоугольника */
+    border-radius: 10px; /* Скругление углов */
+    display: inline-block; /* Обеспечивает, что граница и отступы работают корректно */
+    max-width: 400px; /* Увеличенная ширина */
+    max-height: 40px; /* Фиксированная высота */
+    text-align: center; /* Выравнивание текста по центру */
+    line-height: 25px; /* Вертикальное выравнивание текста по высоте */
+    overflow: hidden; /* Скрыть переполнение */
+    transition: color 0.3s, background-color 0.3s; /* Плавный переход для цвета и фона */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    display: flex;
+    justify-content: center; /* Центрирует по горизонтали */
+    align-items: center; /* Центрирует по вертикали */
+}
+
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.request-title {
+    font-size: 25px !important;
+    color: #000000;
+    text-align: left;
+    flex-grow: 1; /* Заголовок займет оставшееся пространство */
+    margin-left: 20px;
+    text-decoration: underline; /* Подчеркивание ссылки при наведении */
+}
+
+.quit-button {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #FFFFFF; /* Цвет кнопки */
+    color: #000000; /* Цвет текста */
+    text-decoration: none; /* Убирает подчеркивание у ссылки */
+    border: 2px solid #000000;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: color 0.3s, background-color 0.3s;
+    margin-left: 5px; /* Отступ от левого края */
+}
+
+.quit-button:hover {
+    background-color: #e60000; /* Цвет кнопки при наведении */
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.center-container {
+    display: flex;
+    justify-content: center; /* Центрирование по горизонтали */
+    height: 100vh; /* Занимает всю высоту окна браузера (опционально) */
+    margin: 0; /* Убираем внешние отступы */
+}
+
+/* Контент запроса */
+.request-content {
+    color: #000000;
+    text-align: center;
+    padding: 10px 20px;
+    border: #000000;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid #000000; /* Добавляем границу для контуров */
+}
+
+.request-color-Открыт {
+    background-color: #ff4442;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 10px;
+    padding: 4px 8px;
+}
+
+.request-color-В {
+    margin-right: 5px;
+    padding: 4px 8px;
+    background-color: #ffff05;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+.request-color-Закрыт {
+    padding: 4px 8px;
+    background-color: #46ff21;
+    color: #000000;
+    border: 2px solid #000000;
+    border-radius: 10px;
+}
+
+
+
+
+.row-action-В a:hover, .request-color-action-В a:hover {
+    color: #FFFFFF !important; /* Цвет текста ссылки при наведении */
+    background: #00ff7f; /* Одноцветный фон при наведении */
+    text-decoration: none; /* Убирает подчеркивание для ссылок */
+}
+
+.table a {
+    color: #000000; /* Цвет ссылок */
+    text-decoration: none; /* Убирает подчеркивание у ссылок */
+}
+
+.table a:hover {
+    text-decoration: none;
+    text-decoration: underline; /* Подчеркивание ссылки при наведении */
+}
+
+cont {
+    padding: 12px 20px; /* Новый паддинг */
+    display: flex; /* Используем Flexbox */
+    justify-content: center; /* Выровнять содержимое по левому краю */
+    padding-top: 47px;
+    padding-bottom: 0;
+    padding-left: 20px;
+    background-color:#FFFFFF;
+    height: 100px; /* Высота элемента */
+    color: #000000; /* Цвет текста */
+    background-clip: border-box; /* Убедиться, что градиент применяется к фону */
+    margin: 0; /* Убирает любые внешние отступы, чтобы элемент полностью занимал ширину */
+    box-sizing: border-box; /* Учитывать паддинги в ширину */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6); /* Объемный текст */
+}
+
+
+form div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+
+form input[type="radio"] {
+    position: relative;
+    top: 2px;
+    margin-left: 18px;
+}
+
+form input[type="password"], form input[type="email"] {
+    padding: 0.75em 18px;
+    width: 100%;
+}
+
+form input[type="password"], form input[type="email"], textarea {
+    color: #000000;
+    background: #FFFFFF;
+    border: 1px solid #E4E5E7;
+    border-radius: 3px;
+}
+
+form label {
+    display: inline-block;
+    margin-bottom: 9px;
+}
+
+/* Стили для контейнера формы */
+form {
+    width: 100%;
+    max-width: 5000px; /* Ограничиваем максимальную ширину формы */
+    margin: 0 auto; /* Центрируем форму по горизонтали */
+    padding: 20px;
+    border: 2px solid #000; /* Граница вокруг формы */
+    border-radius: 10px; /* Скругление углов */
+    background-color: #f9f9f9; /* Фоновый цвет формы */
+}
+
+/* Стили для меток */
+label {
+    display: block; /* Каждая метка отображается на отдельной строке */
+    margin-bottom: 10px; /* Отступ снизу для меток */
+    font-weight: bold; /* Жирный текст для меток */
+    color: #000000; /* Цвет текста меток */
+}
+
+/* Стили для текстовых полей (input и textarea) */
+input[type="text"], textarea {
+    width: 100%; /* Поля занимают всю ширину формы */
+    padding: 10px; /* Внутренние отступы */
+    margin-bottom: 20px; /* Отступ снизу для каждого поля */
+    border: 1px solid #000000; /* Светлая граница */
+    border-radius: 5px; /* Скругленные углы */
+    font-size: 16px; /* Размер шрифта внутри полей */
+    box-sizing: border-box; /* Учитываем границы в ширине элемента */
+}
+
+/* Стили для кнопки */
+button[type="submit"] {
+    width: 100%; /* Кнопка занимает всю ширину формы */
+    padding: 10px 15px; /* Внутренние отступы */
+    background-color: #007BFF; /* Синий фон для кнопки */
+    color: #000000;
+    border: none; /* Убираем границы */
+    border-radius: 5px; /* Скругленные углы */
+    cursor: pointer; /* Указатель при наведении */
+    font-size: 16px; /* Размер шрифта внутри кнопки */
+    transition: background-color 0.3s ease; /* Плавный переход фона */
+}
+
+/* Стили для кнопки при наведении */
+button[type="submit"]:hover {
+    background-color: #0056b3; /* Более темный оттенок синего при наведении */
+    color: #fff; /* Белый цвет текста */
+}
+
+
+
+.error {
+    color: #C0392B;
+    font-weight: bold;
+    display: block;
+}
+
+.error + textarea, .error + input {
+    border-color: #C0392B !important;
+    border-width: 2px !important;
+}
+
+textarea {
+    padding: 18px;
+    width: 100%;
+    height: 266px;
+}
+
+.snippet {
+    background-color: #FFFFFF;
+    border: 1px solid #E4E5E7;
+    border-radius: 3px;
+}
+
+.snippet pre {
+    padding: 18px;
+    border-top: 1px solid #E4E5E7;
+    border-bottom: 1px solid #E4E5E7;
+}
+
+.snippet .metadata {
+    background-color: #F7F9FA;
+    color: #6A6C6F;
+    padding: 0.75em 18px;
+    overflow: auto;
+}
+
+.snippet .metadata span {
+    float: right;
+}
+
+.snippet .metadata strong {
+    color: #34495E;
+}
+
+.snippet .metadata time {
+    display: inline-block;
+}
+
+.snippet .metadata time:first-child {
+    float: left;
+}
+
+.snippet .metadata time:last-child {
+    float: right;
+}
+
+footer {
+    padding-top: 17px;
+    padding-bottom: 60px;
+    background-color:#2A46A0;
+    height: 60px;
+    color: #FFFFFF;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0; /* Добавьте эту строку для обеспечения, что футер выровнен по левому краю */
+    width: 100%;
+    box-sizing: border-box; /* Убедитесь, что границы и внутренние отступы учитываются в ширине элемента */
+}

@@ -1,0 +1,29 @@
+{{template "base" .}}
+
+{{define "title"}}Преподаватели{{end}}
+<table class="table-teachers">
+  <thead>
+    <tr>
+      <th>Рейтинг</th>
+      <th>Фамилия</th>
+      <th>Имя</th>
+      <th>Группа</th>
+      <th>Завершенный курс</th>
+      <th>Описание</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{range .Users}}
+      <tr>
+        <td class="row-rating-{{.Rating}}">{{.Rating}}</td>
+        <td>{{.Surname}}</td>
+        <td>{{.Name}}</td>
+        <td>{{.Group}}</td>
+        <td>{{.Course}}</td>
+        <td>{{.Description}}</td>
+      </tr>
+    {{end}}
+  </tbody>
+</table>
+{{define "main"}}
+{{end}}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вход</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0; /* Цвет фона страницы */
+        }
+
+        .login-container {
+            border: 2px solid black; /* Черная рамка */
+            padding: 50px; /* Внутренние отступы */
+            background-color: white; /* Цвет фона формы */
+            border-radius: 10px; /* Закругленные углы */
+        }
+
+        label {
+            display: block; /* Чтобы каждый label занимал отдельную строку */
+            margin-bottom: 5px; /* Отступ между label и input */
+        }
+
+        input[type="text"],
+        input[type="password"] {
+            width: 90%; /* Ширина input по 100% */
+            padding: 10px; /* Внутренние отступы */
+            margin-bottom: 15px; /* Отступ между полями */
+            border: 1px solid #ccc; /* Светло-серая рамка */
+            border-radius: 5px; /* Закругленные углы для input */
+        }
+
+        button {
+            width: 100%; /* Ширина кнопки по 100% */
+            padding: 10px; /* Внутренние отступы */
+            background-color: blue; /* Синий цвет кнопки */
+            color: white; /* Белый цвет текста */
+            border: none; /* Убираем стандартную рамку */
+            border-radius: 5px; /* Закругленные углы для кнопки */
+            cursor: pointer; /* Курсор при наведении */
+            font-size: 16px; /* Размер шрифта */
+        }
+
+        button:hover {
+            background-color: darkblue; /* Цвет кнопки при наведении */
+        }
+    </style>
+        <link rel='shortcut icon' href='https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/21/d4/a2/21d4a2e5-f641-7495-d7a7-07ae6f8fee70/AppIcon-0-0-1x_U007emarketing-0-10-0-85-220.png/460x0w.webp' type='image/x-icon'>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Вход</h2>
+        <form action="/login" method="POST">
+            <label for="username">Логин:</label>
+            <input type="text" id="username" name="username" required>
+            <label for="password">Пароль:</label>
+            <input type="password" id="password" name="password" required>
+            <button type="submit">Войти</button>
+        </form>
+    </div>
+</body>
+</html>

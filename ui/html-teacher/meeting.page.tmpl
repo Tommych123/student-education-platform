@@ -1,0 +1,26 @@
+{{template "base" .}}
+
+{{define "title"}}Конференция Zoom{{end}}
+
+<form action="/teacher/meeting?meeting={{.Request.ID}}" method="POST">
+    <table class="table-zoom">
+        <thead>
+            <tr>
+                <th>Zoom ID конференции для занятия</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <!-- Поле для ввода Zoom ID -->
+                    <input type="text" id="zoom-id" name="zoomID" value="{{.Request.ZoomID}}" placeholder="Введите Zoom ID" />
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <!-- Кнопка для отправки формы -->
+    <button type="submit">Обновить Zoom ID</button>
+</form>
+
+{{define "main"}}
+{{end}}
